@@ -10,7 +10,7 @@
 <body>
     <div class="img">
         <div class="block">
-            <p class="logo-name">E-SCAPE</p>
+            <img class="logo-image" src="/img/e-scape-logo.png" />
         </div>
     </div>
     <div class="information">
@@ -18,10 +18,10 @@
             <p class="sign-up-now">Sign up now to join millions in their journey to e-scape.</p>
             <p class="disclaimer"><em>This is not a real online service.</em></p>
         </div>
-        <form action="GET">
+        <form id="user-inputs" action="GET">
             <div class="form">
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" />
+                <input type="text" id="first-name" name="first-name" required/>
             </div>
             <div class="form">
                 <label for="last-name">Last Name</label>
@@ -29,24 +29,25 @@
             </div>
             <div class="form">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" />
+                <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
             </div>
             <div class="form">
                 <label for="phone-number">Phone Number</label>
-                <input type="tel" id="phone-number" name="phone-number" />
+                <input type="tel" id="phone-number" name="phone-number" pattern="[1-9]{1}[0-9]{9}"/>
             </div>
             <div class="form">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" />
+                <input type="password" id="password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"/>
             </div>
             <div class="form">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" />
+                <input type="password" id="confirm-password" name="confirm-password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"/>
             </div>
+          <p class="asterisk">Fields marked with an asterisk(*) are required</p>
         </form>
         <div class="footer">
-            <button class="submit">Create Account</button>
-            <p class="log-in"><i>Already have an account?<a href="index.html">Log in</a></i></p>
+            <button type="submit" class="submit" form="user-inputs" value="submit">Create Account</button>
+            <p class="log-in"><i>Already have an account?<a href="#">Log in</a></i></p>
         </div>
     </div>
     <script src="javascript.js"></script>
