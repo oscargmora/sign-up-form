@@ -464,7 +464,9 @@ a {
   background-repeat: no-repeat;
   background-image: url(img/neon-city.jpg);
   background-position: 50% 60%;
+  display: flex;
 }
+
 
 .block {
   display: block;
@@ -491,4 +493,83 @@ a {
 .logo-image {
   width: 300px;
   color: black;
+}
+
+@media only screen and (max-width: 754px)  {
+  body{
+      flex-flow: column;
+      height: auto;
+      text-align: center;
+  }
+  .block {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.85);
+      width: 100%;
+      height: 100%;
+      margin-top: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+  }
+  .img{
+      width: 100vw;
+      height: 15vh;
+      display: flex;
+      background-size: 100vw;
+  }
+  .logo-image{
+      width: 90vw;
+      position: static;
+  }
+  .information{
+      margin-top: -160px;
+      width: auto;
+      height: auto;
+  }
+  .description{
+      width: auto;
+      margin-top: 30px;
+      margin-right: 80px;
+  }
+  .left{
+      padding: 10px 20px;
+  }
+  .remote-text{
+      padding: 20px 0;
+      margin: 0;
+  }
+  .form{
+      flex-flow: column nowrap;
+      align-items: center;
+
+  }
+  .input{
+      text-align: left;
+      width: auto;
+      font-size: 0.9em;
+      justify-content: center;
+      align-items: center;
+  }
+  input{
+      font-size: 0.9rem;
+      height: 1.5rem;
+      width: 70vw;
+  }
+  .button,
+  .log-in{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0px;
+  }
+  .footer{
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      align-self: center;
+      margin-right: 80px;
+      margin-bottom: 30px;
+  }
+  label{
+    margin-bottom: 5px;
+  }
 }
